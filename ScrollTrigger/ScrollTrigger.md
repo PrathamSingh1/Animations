@@ -63,3 +63,31 @@ gsap.from("#page2 h2", {
         start: "top 50%"
     }
 })
+
+
+
+How to start the animation on the basics on scroll
+
+
+scrub -> It is a property of the smoothness it has values either boolean (true, fasle) or 1 - 5 on the basic of smoothness
+
+pin -> It pin your element when scrolling
+    when we use pin property we trigger parent element
+
+Example 3 ->
+
+gsap.from("#page2 box", {
+    scale: 0,
+    opacity: 0,
+    rotate: 720,
+    duration: 1,
+    scrollTrigger: {
+        trigger: "#page2 box",
+        scroller: "body",
+        markers: true,
+        start: "top 60%",
+        end: "top 30%",
+        scrub: true,
+        pin: true
+    }
+})
